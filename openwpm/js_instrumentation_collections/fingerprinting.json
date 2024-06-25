@@ -1,14 +1,11 @@
 [
-    "ScriptProcessorNode",
-    "GainNode",
-    "AnalyserNode",
-    "OscillatorNode",
-    "OfflineAudioContext",
     "AudioContext",
+    "OfflineAudioContext",
     "RTCPeerConnection",
     "HTMLCanvasElement",
     "Storage",
-    "window.navigator",
+    "WebGLRenderingContext",
+    "WebGL2RenderingContext",
     {"CanvasRenderingContext2D": {
         "excludedProperties": [
             "quadraticCurveTo",
@@ -29,10 +26,7 @@
         "propertiesToInstrument": ["name", "localStorage", "sessionStorage"]
     }},
     {"window.document": {
-        "propertiesToInstrument": ["cookie", "referrer"],
+        "propertiesToInstrument": ["cookie"],
         "logCallStack": true
-    }},
-    {"window.screen": {
-        "propertiesToInstrument": ["pixelDepth", "colorDepth"]
     }}
 ]

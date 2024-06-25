@@ -145,6 +145,8 @@ class BrowserParams(DataClassJsonMixin):
     tracking_protection: bool = False
     custom_params: Dict[Any, Any] = field(default_factory=lambda: {})
 
+    isdcac_enabled: bool = False
+
 
 @dataclass
 class ManagerParams(DataClassJsonMixin):

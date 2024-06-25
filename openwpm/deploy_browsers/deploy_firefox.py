@@ -163,6 +163,14 @@ def deploy_firefox(
             "BROWSER %i: OpenWPM Firefox extension loaded" % browser_params.browser_id
         )
 
+    if browser_params.isdcac_enabled:
+        isdcac_loc = os.path.join(root_dir, "../../extra-extensions/istilldontcareaboutcookies-1.1.4.xpi")
+        isdcac_loc = os.path.normpath(isdcac_loc)
+        driver.install_addon(isdcac_loc , temporary=True)
+        logger.debug(
+            "BROWSER %i: \"I Still Don't Care About Cookies Firefox\" extension loaded" % browser_params.browser_id
+        )
+
     # set window size
     driver.set_window_size(*DEFAULT_SCREEN_RES)
 
